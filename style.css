@@ -200,7 +200,8 @@ footer > .links > a {
     }
 
     .brief-about-with-photo,
-    .quick-access-links > .links {
+    .quick-access-links > .links,
+    footer > .links {
         flex-direction: column;
     }
 
@@ -208,5 +209,7 @@ footer > .links > a {
         order: 0;
     }
 
-    
+    .quick-access-links > .links {
+        padding: 0.5em;
+    }
 }
