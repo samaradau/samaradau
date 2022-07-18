@@ -15,12 +15,34 @@ h1 {
 }
 
 header, main, footer {
-    padding: 0 20vw;
+    padding: 2vh 20vw;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all .1s ease-out;
+}
+
+a:hover {
+    border: white solid 2px ;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    justify-content: space-between;
+}
+
+h2 {
+    margin: 0.5em 0;
+    text-align: center;
 }
 
 header {
-    padding: 2vh 20vw;
     display: flex;
+    height: 2em;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -28,6 +50,7 @@ header {
     box-shadow: 0 1px 5px 0 black;
     color: white;
     gap: 2vh;
+    margin-bottom: 1em;
 }
 
 header > nav {
@@ -36,15 +59,16 @@ header > nav {
     gap: 2vh;
 }
 
-header > nav > li {
+header > nav > a > li {
     list-style: none;
     text-align: center;
     text-overflow: clip;
     padding: 0.5em;
     background-color: rgba(0, 0, 0, 0.278);
-    border-color: white 1px solid;
     z-index: 1;
     white-space: nowrap;
+    word-wrap: normal;
+    padding: 0.5em 0.5em;
 }
 
 /* TODO: Make localization once I've got a chance */
@@ -54,36 +78,11 @@ header > nav > li {
     padding: 0.5em 0.5em;
 } */
 
-header > nav > li > a {
-    color: white;
-    text-decoration: none;
-    word-wrap: normal;
-    border-radius: 5px;
-    padding: 0.5em 0.5em;
+.greetings-card {
+    padding: 2em;
+    box-shadow: 0 2px 5px 0 rgb(204, 204, 204);
 }
 
-header > nav > li:hover {
-    border-color: white 1px solid;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-}
-
-h2 {
-    margin: 0.5em 0;
-}
-
-.about {
-    padding-top: 4vh;
-}
-
-.brief-about-with-photo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .links {
     display: flex;
@@ -92,9 +91,30 @@ h2 {
     gap: 1px;
 }
 
-.brief-about-with-photo > .profile-photo {
+.greetings-card > .greetings-with-image {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.greetings-card > .greetings-with-image > h2 {
+    text-align: center;
+}
+
+.greetings-card > .greetings-with-image > img {
+    width: 3em;
+    height: 3em;
+}
+
+.greetings-card  > .brief-about-with-photo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greetings-card > .brief-about-with-photo > img {
     order: 1;
-    padding: 1vw;
+    padding: 0.5em;
     margin: 2vh;
     width: 15vw;
     min-width: 150px;
@@ -102,12 +122,68 @@ h2 {
     object-fit: cover;
     box-shadow: 0px 0px 13px -5px black;
     border-radius: 50%;
-    z-index: -1;
-    transition: all 0.2s ease-in-out;
 }
 
-.brief-about-with-photo > .profile-photo:hover {
-    transform: scale(1);
+.quick-access-links > h2 {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.quick-access-links > .links {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.quick-access-links > .links > .links-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.quick-access-links > .links > .links-group >  a {
+    transition: all 0.5s ease-out;
+
+}
+
+.quick-access-links > .links > .links-group >  a > .link-card {
+    background-color: rgba(126, 126, 126, 0.159);
+    display: flex;
+    height: 8em;
+    width: 8em;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2em;
+    gap: 2;
+}
+
+.quick-access-links > .links > .links-group > a > .link-card > img {
+    width: 3em;
+    height: 3em;
+}
+
+
+footer {
+    position: static;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.671);
+    color: white;
+    margin-top: 2em;
+    padding: 2em 20vw;
+}
+
+footer > h2 {
+    margin-bottom: 1em;
+}
+
+footer > .links > a {
+    padding: 0.5em 1em;
+    border-radius: 5px;
 }
 
 @media (max-width: 760px) {
@@ -116,22 +192,21 @@ h2 {
     }
 
     main, footer {
-        padding: 2vh 2vw;
+        padding: 2vh 4vw;
     }
 
     h2 {
         text-align: center;
     }
 
-    .about {
-        padding-top: 0;
-    }
-
-    .brief-about-with-photo {
+    .brief-about-with-photo,
+    .quick-access-links > .links {
         flex-direction: column;
     }
 
-    .brief-about-with-photo > .profile-photo {
+    .brief-about-with-photo > img {
         order: 0;
     }
+
+    
 }

@@ -12,10 +12,9 @@
     <h1>Yury Samaradau - Personal Website</h1>
     <header>
         <nav>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Bio</a></li>
-            <li><a href="#">Recent posts</a></li>
-            <li><a href="#">Links</a></li>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Bio</li></a>
+            <a href="#"><li>Recent posts</li></a>
         </nav>
         <!-- TODO: Make localization once I've got a chance -->
         <!-- <select>
@@ -26,27 +25,59 @@
     </header>
     <main>
         <section class="about">
-            <h2>Hi there👋</h2>
-            <div class="brief-about-with-photo">
-                <img src="./img/yury_profile_photo.jpg" class="profile-photo" alt="Yury's profile photo" />
-                <p class="brief-about">My name is Yury Samaradau, I live and work in Minsk. I've been working as a software engineer for the last 6 years.
-                    Focused mostly on backend development using the .NET/C# technology stack Here I'm gonna share some details about me, my life and experiance.
-                    There are some topics on the Website you might find interesting if you'd like to get acquainted with me.
-                    Here you can find more
-                    about Skills I've developed.</p>
+            <div class="greetings-card">
+                <span class="greetings-with-image">
+                    <h2>Hello there!</h2>
+                    <img src="./img/beardmen.svg" alt="Beardmen just like Obi-Wan Kenobi, but better" />
+                </span>
+                <div class="brief-about-with-photo">
+                    <img src="./img/yury_profile_photo.jpg" class="profile-photo" alt="Yury's profile photo" />
+                    <p class="brief-about">My name is Yury Samaradau, I live and work in Minsk. I've been working as a software engineer for the last 6 years.
+                        Mostly focused on backend development using the .NET/C# technology stack. Here I'm gonna share some details about me, my life and experiance.</p>
+                </div>
             </div>
         </section>
-        <section class="bio">
-            <h2>Bio</h2>
-            <p>Born and grown in Minsk</p>
-            <p>Currently work in ITechArt Group as a backend software engineer. </p>
+        <section class="quick-access-links">
+            <h2>Quick Access Links</h2>
+            <div class="links">
+                <div class="links-group">
+                    <a href="#">
+                        <div class="link-card">
+                            <img src="img/icon_graduate.png" alt="info icon" />
+                            <span class="description">Bio from beginning till now.</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="link-card">
+                            <img src="img/icon_screwdriver.png" alt="technologies icon" />
+                            <span class="description">Hard Skills and Technologies</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="links-group">
+                    <a href="#">
+                        <div class="link-card">
+                            <img src="img/icon_brain.png" alt="technologies icon" />
+                            <span class="description">Soft Skills and Mental Helth</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="link-card">
+                            <img src="img/icon_lighthouse.png" alt="technologies icon" />
+                            <span class="description">Interests and Values</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <h2>Follow me</h2>
         <div class="links">
+            <a href="mailto:yury.samaradau@gmail.com">Email</a>
             <a href="https://github.com/samaradau">Github</a>
             <a href="https://www.linkedin.com/in/yurysamaradau/">LinkedIn</a>
+            <a href="https://instagram.com/yury_samaradau/">Instagram</a>
             <a href="https://t.me/aloeverq">Telegram</a>
         </div>
     </footer>
