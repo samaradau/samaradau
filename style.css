@@ -47,11 +47,12 @@ header > nav > li {
     white-space: nowrap;
 }
 
-header > select {
+/* TODO: Make localization once I've got a chance */
+/* header > select {
     border: none;
     border-radius: 5px;
     padding: 0.5em 0.5em;
-}
+} */
 
 header > nav > li > a {
     color: white;
