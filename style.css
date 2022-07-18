@@ -22,7 +22,7 @@ header {
     padding: 2vh 20vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #cd5c5c;
     box-shadow: 0 1px 5px 0 black;
@@ -73,22 +73,32 @@ main {
 
 h2 {
     margin: 0.5em 0;
-    text-align: center;
 }
 
 .about {
     padding-top: 4vh;
 }
 
-.flex-container {
+.brief-about-with-photo {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.profile-image {
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1px;
+}
+
+.brief-about-with-photo > .profile-photo {
+    order: 1;
     padding: 1vw;
     margin: 2vh;
     width: 15vw;
     min-width: 150px;
+    min-height: 150px;
     object-fit: cover;
     box-shadow: 0px 0px 13px -5px black;
     border-radius: 50%;
@@ -96,7 +106,7 @@ h2 {
     transition: all 0.2s ease-in-out;
 }
 
-.profile-image:hover {
+.brief-about-with-photo > .profile-photo:hover {
     transform: scale(1);
 }
 
@@ -109,7 +119,19 @@ h2 {
         padding: 2vh 2vw;
     }
 
+    h2 {
+        text-align: center;
+    }
+
     .about {
         padding-top: 0;
+    }
+
+    .brief-about-with-photo {
+        flex-direction: column;
+    }
+
+    .brief-about-with-photo > .profile-photo {
+        order: 0;
     }
 }
