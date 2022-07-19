@@ -22,11 +22,6 @@ header, main, footer {
 a {
     text-decoration: none;
     color: inherit;
-    transition: all .1s ease-out;
-}
-
-a:hover {
-    border: white solid 2px ;
 }
 
 main {
@@ -57,19 +52,31 @@ header {
 header > nav {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 2vh;
+}
+
+header > nav > a {
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.278);
+    z-index: 1;
+    white-space: nowrap;
+    word-wrap: normal;
+    border-radius: 5px;
+}
+
+header > nav > a:hover {
+    box-sizing: border-box;
+    border: 1px white solid;
+    box-shadow: 0 2px 5px 0 rgba(222, 222, 222, 0.772);
 }
 
 header > nav > a > li {
     list-style: none;
     text-align: center;
     text-overflow: clip;
-    padding: 0.5em;
-    background-color: rgba(0, 0, 0, 0.278);
-    z-index: 1;
-    white-space: nowrap;
-    word-wrap: normal;
-    padding: 0.5em 0.5em;
+    
 }
 
 /* TODO: Make localization once I've got a chance */
@@ -121,7 +128,7 @@ header > nav > a > li {
     min-width: 150px;
     min-height: 150px;
     object-fit: cover;
-    box-shadow: 0px 0px 13px -5px black;
+    box-shadow: 0px 0px 13px -5px rgb(40, 40, 40);
     border-radius: 50%;
 }
 
@@ -141,7 +148,12 @@ header > nav > a > li {
 }
 
 .quick-access-links > .links > .links-group >  a {
-    transition: all 0.5s ease-out;
+}
+
+.quick-access-links > .links > .links-group >  a:hover {
+    box-shadow: 0px 0px 13px -5px rgb(103, 103, 103);
+    border: black 1px solid;
+
 }
 
 .quick-access-links > .links > .links-group >  a > .link-card {
@@ -167,7 +179,8 @@ header > nav > a > li {
 footer {
     position: static;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.671);
+    background-color: rgba(0, 0, 0, 0.618);
+    box-shadow: 0 -1px 5px 0 black;
     color: white;
     margin-top: 2em;
     padding: 2em 20vw;
@@ -178,13 +191,29 @@ footer > h2 {
 }
 
 footer > .links > a {
+    box-sizing: border-box;
     padding: 0.5em 1em;
     border-radius: 5px;
+    gap: 1em 1em;
 }
 
-@media (max-width: 760px) {
+footer > .links > a:hover {
+    border: white 1px solid;
+}
+
+@media (max-width: 1359px) {
     header {
-        padding: 2vh 2vw;
+        padding: 2vh 10vw;
+    }
+
+    main, footer {
+        padding: 2vh 10vw;
+    }
+}
+
+@media (max-width: 1019px) {
+    header {
+        padding: 2vh 4vw;
     }
 
     main, footer {
@@ -196,7 +225,6 @@ footer > .links > a {
     }
 
     .brief-about-with-photo,
-    .quick-access-links > .links,
     footer > .links {
         flex-direction: column;
     }
