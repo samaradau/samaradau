@@ -16,6 +16,7 @@ h1 {
 
 header, main, footer {
     padding: 2vh 20vw;
+    min-width: 280;
 }
 
 a {
@@ -129,29 +130,24 @@ header > nav > a > li {
     margin-bottom: 2em;
 }
 
-.quick-access-links > .links {
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    justify-content: space-between;
-    gap: 2em;
-}
-
+.quick-access-links > .links,
 .quick-access-links > .links > .links-group {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 2em;
+    justify-self: center;
+    justify-content: center;
+    gap: 1em;
 }
 
 .quick-access-links > .links > .links-group >  a {
     transition: all 0.5s ease-out;
-
 }
 
 .quick-access-links > .links > .links-group >  a > .link-card {
     background-color: rgba(126, 126, 126, 0.159);
     display: flex;
+    flex: 7em 8em;
     height: 8em;
     width: 8em;
     justify-content: space-evenly;
@@ -205,7 +201,7 @@ footer > .links > a {
         flex-direction: column;
     }
 
-    .brief-about-with-photo > img {
+    .greetings-card > .brief-about-with-photo > img {
         order: 0;
     }
 
